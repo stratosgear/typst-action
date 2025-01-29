@@ -7,12 +7,14 @@ LABEL \
 	org.opencontainers.image.source="https://github.com/stratosgear/typst-action"
 
 
+RUN apk add python3
+
 COPY \
 	LICENSE \
 	README.md \
 	entrypoint.py \
 	/root/
 
-RUN chmod +x /root/entrypoint.py
+# RUN chmod +x /root/entrypoint.py
 
-ENTRYPOINT ["/root/entrypoint.py"]
+ENTRYPOINT ["python3", "/root/entrypoint.py"]
