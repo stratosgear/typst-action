@@ -9,7 +9,7 @@ LABEL \
 COPY \
 	LICENSE \
 	README.md \
-	entrypoint.py \
+	entrypoint \
 	/root/
 
-ENTRYPOINT ["python3", "/root/entrypoint.py"]
+ENTRYPOINT ["/root/entrypoint"]
