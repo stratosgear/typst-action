@@ -5,7 +5,6 @@ LABEL \
 	org.opencontainers.image.authors="Stratos Gerakakis <stratos@gerakakis.net>" \
 	org.opencontainers.image.source="https://github.com/stratosgear/typst-action"
 
-RUN apk add python3
 
 COPY \
 	LICENSE \
