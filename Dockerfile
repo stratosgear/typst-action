@@ -1,4 +1,5 @@
-FROM 123marvin123/typst:0.12
+# FROM 123marvin123/typst:0.12
+FROM ghcr.io/typst/typst
 
 LABEL \
 	org.opencontainers.image.title="Typst GitHub action based on 123marvin123/typst:0.12 image" \
@@ -9,9 +10,9 @@ LABEL \
 COPY \
 	LICENSE \
 	README.md \
-	entrypoint.sh \
+	entrypoint.py \
 	/root/
 
-RUN chmod +x /root/entrypoint.sh
+RUN chmod +x /root/entrypoint.py
 
-ENTRYPOINT ["/root/entrypoint.sh"]
+ENTRYPOINT ["/root/entrypoint.py"]
