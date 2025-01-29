@@ -10,7 +10,7 @@ def compile(filename: str, options: list[str]) -> bool:
     Returns True if the typst command exited with status 0, False otherwise.
     """
     command = ["typst", "compile"] + options + [filename]
-    logging.debug("Running: " + " ".join(command))
+    logging.info("Running: " + " ".join(command))
 
     result = subprocess.run(command, capture_output=True, text=True)
     try:
