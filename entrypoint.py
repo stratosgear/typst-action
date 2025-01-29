@@ -10,7 +10,7 @@ def compile(filename: str, options: list[str]) -> bool:
     Returns True if the typst command exited with status 0, False otherwise.
     """
 
-    pdf_filename = f"./{filename.split("/")[-1]}"
+    pdf_filename = filename.split("/")[-1].split(".")[0] + ".pdf"
 
     command = ["typst", "compile"] + options + [filename, pdf_filename]
     logging.info("Running: " + " ".join(command))
