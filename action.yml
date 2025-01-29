@@ -22,7 +22,7 @@ inputs:
       form:
 
         - name: Typst
-          uses: lvignoli/typst-action@main
+          uses: stratosgear/typst-action@main
           with:
             source_file: main.typ
             options: |

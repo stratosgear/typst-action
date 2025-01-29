@@ -9,7 +9,7 @@ LABEL \
 COPY \
 	LICENSE \
 	README.md \
-	entrypoint \
+	entrypoint.sh \
 	/root/
 
-ENTRYPOINT ["/root/entrypoint"]
+ENTRYPOINT ["/root/entrypoint.sh"]
