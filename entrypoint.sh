@@ -8,7 +8,7 @@ OPTIONS=$2
 echo "Source File: $SOURCE_FILE"
 echo "Options: $OPTIONS"
 
-
 OPTIONS=$(echo $OPTIONS | tr '\n' ' ')
+echo "Options: $OPTIONS"
 
-typst $OPTIONS compile $SOURCE_FILE
+typst compile $OPTIONS $SOURCE_FILE docs.pdf
